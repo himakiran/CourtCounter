@@ -6,32 +6,30 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private int Score = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayScore(Score);
+
 
     }
-
-
-    private void displayScore(int score) {
-        TextView t = (TextView) findViewById(R.id.scoreBoard);
-        //t.setText("" + score);
-        t.setText(String.valueOf(score));
+    /**
+     * Displays the given score for Team A.
+     */
+    public void displayForTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        scoreView.setText(String.valueOf(score));
+    }
+    public void display3(View view) {
+        displayForTeamA(3);
+    }
+    public void display2(View view) {
+        displayForTeamA(2);
+    }
+    public void display1(View view) {
+        displayForTeamA(1);
     }
 
-    public void threePointer(View view) {
-        Score += 3;displayScore(Score);
-    }
-
-    public void twopointer(View view) {
-        Score += 2;displayScore(Score);
-    }
-
-    public void freeThrow(View view) {
-        Score += 1;displayScore(Score);
-    }
 }

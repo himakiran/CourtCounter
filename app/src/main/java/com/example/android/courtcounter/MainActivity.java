@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayScore(int score) {
         TextView t = (TextView) findViewById(R.id.scoreBoard);
-        t.setText("" + score);
+        //t.setText("" + score);
+        t.setText(String.valueOf(score));
     }
 
     public void threePointer(View view) {

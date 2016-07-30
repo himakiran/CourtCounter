@@ -2,7 +2,12 @@
               xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_weight="1">
 
     <LinearLayout
         android:layout_weight="1"
@@ -72,21 +77,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:onClick="addThreeforTeamA"
+            android:onClick="addThreeforTeamB"
             android:text="+3 Points" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:onClick="addTwoforTeamA"
+            android:onClick="addTwoforTeamB"
             android:text="+2 Points" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:onClick="addOneforTeamA"
+            android:onClick="addOneforTeamB"
             android:text="Free throw" />
+
+
     </LinearLayout>
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_weight="1">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="150dp"
+        android:id="@+id/reset_Button"
+        android:onClick="doReset"
+        android:text="RESET"/>
+</LinearLayout>
+
 </LinearLayout>

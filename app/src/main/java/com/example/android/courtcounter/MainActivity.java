@@ -18,18 +18,22 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays the given score for Team A.
      */
+    public int scoreTeamA = 0;
     public void displayForTeamA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
-    public void display3(View view) {
-        displayForTeamA(3);
+    public void addThreeforTeamA(View view)
+    {
+        scoreTeamA += 3;displayForTeamA(scoreTeamA);
     }
-    public void display2(View view) {
-        displayForTeamA(2);
+    public void addTwoforTeamA(View view)
+    {
+        scoreTeamA += 2;displayForTeamA(scoreTeamA);
     }
-    public void display1(View view) {
-        displayForTeamA(1);
+    public void addOneforTeamA(View view)
+    {
+        scoreTeamA += 1;displayForTeamA(scoreTeamA);
     }
 
 }
